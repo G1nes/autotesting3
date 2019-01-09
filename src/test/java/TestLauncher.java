@@ -1,9 +1,9 @@
-import main.java.TestProperties;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.Properties;
@@ -23,8 +23,12 @@ public class TestLauncher {
                 break;
             case "chrome" :
                 System.setProperty("webdriver.chrome.driver", setProperties.getProperty("webdriver.chrome.driver"));
+                driver = new ChromeDriver();
+                break;
                 default:
                     System.setProperty("webdriver.chrome.driver", setProperties.getProperty("webdriver.chrome.driver"));
+                    driver = new ChromeDriver();
+                    break;
         }
         url = setProperties.getProperty("url");
         System.out.println(url);

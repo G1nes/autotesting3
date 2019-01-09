@@ -1,29 +1,13 @@
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
 
 public class InsuranceTest extends TestLauncher {
-    /*private WebDriver driver;
-    private WebElement element;
-    private String url = "https://www.sberbank.ru/ru/person";*/
-
-    /*@Before
-    public void setUp(){
-        System.setProperty("webdriver.chrome.driver","src\\driver\\chromedriver.exe");
-        System.setProperty("webdriver.gecko.driver","src\\driver\\geckodriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-    }*/
     @Test
     public void testSberInsurance () throws Exception{
         driver.get(url);
@@ -61,9 +45,4 @@ public class InsuranceTest extends TestLauncher {
         element = driver.findElement(By.xpath("//*[text()='Заполнены не все обязательные поля']"));
         Assert.assertEquals("Заполнены не все обязательные поля", element.getText());
     }
-    /*@After
-    public void clean (){
-        driver.close();
-        driver.quit();
-    }*/
 }

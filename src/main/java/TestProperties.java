@@ -1,5 +1,3 @@
-package main.java;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
@@ -9,7 +7,7 @@ public class TestProperties {
     private static TestProperties INSTANCE =null;
     private TestProperties(){
         try{
-            properties.load(new FileInputStream(new File("./"+System.getProperty("settings")+".properties")));
+            properties.load(new FileInputStream(new File("C:\\Program Files\\JavaLearning\\autotesting3\\settings.properties")));
         }catch (Exception e){
             e.printStackTrace();
         }
