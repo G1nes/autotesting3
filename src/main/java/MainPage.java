@@ -9,7 +9,6 @@ public class MainPage {
     WebDriver driver;
     //https://www.sberbank.ru/ru/person
     public MainPage(){
-
     }
     public MainPage(WebDriver driver){
         PageFactory.initElements(driver, this);
