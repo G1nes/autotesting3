@@ -43,4 +43,8 @@ public class TestLauncher {
         element.clear();
         element.sendKeys(value);
     }
+    public void fillFieldByXpath (By locator, String value){
+        driver.findElement(locator).clear();
+        driver.findElement(locator).sendKeys(value);
+    }
 }
