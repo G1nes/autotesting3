@@ -12,6 +12,25 @@ public class OrderPage extends MainPage {
         (new WebDriverWait(driver, 1)).until(ExpectedConditions.visibilityOf(lNameInsured));
         this.driver=driver;
     }
+    public void fillField(WebElement element, String value){
+        element.clear();
+        element.sendKeys(value);
+    }
+    public void fillFields (){
+        OrderPage orderPage = new OrderPage(driver);
+        fillField(orderPage.lNameInsured, "Kurumov");
+        fillField(orderPage.fNameInsured, "Deni");
+        fillField(orderPage.birthDateInsured, "01011992");
+        fillField(orderPage.sName, "Курумова");
+        fillField(orderPage.fName, "Мадина");
+        fillField(orderPage.mName, "НеЗнаюОтчества");
+        fillField(orderPage.birthDate, "01011995");
+        orderPage.checkBoxFemale.click();
+        fillField(orderPage.idSeries, "1234");
+        fillField(orderPage.idNumber, "123456");
+        fillField(orderPage.issueDate, "01012010");
+        fillField(orderPage.issuePlace, "01012010");
+    }
 
     @FindBy(name="insured0_surname")
     WebElement lNameInsured;

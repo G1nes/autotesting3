@@ -39,10 +39,7 @@ public class TestLauncher {
     public static void cleaner ()throws Exception{
         driver.quit();
     }
-    public void fillField(WebElement element, String value){
-        element.clear();
-        element.sendKeys(value);
-    }
+
     public void fillFieldByXpath (By locator, String value){
         driver.findElement(locator).clear();
         driver.findElement(locator).sendKeys(value);

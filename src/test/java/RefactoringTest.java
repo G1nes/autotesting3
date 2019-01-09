@@ -19,19 +19,13 @@ public class RefactoringTest extends TestLauncher{
         calculatorForm.priceBox.click();
         calculatorForm.orderBtn.click();
         OrderPage orderPage = new OrderPage(driver);
-        fillField(orderPage.lNameInsured, "Kurumov");
-        fillField(orderPage.fNameInsured, "Deni");
-        fillField(orderPage.birthDateInsured, "01011992");
-        fillField(orderPage.sName, "Курумова");
-        fillField(orderPage.fName, "Мадина");
-        fillField(orderPage.mName, "НеЗнаюОтчества");
-        fillField(orderPage.birthDate, "01011995");
-        orderPage.checkBoxFemale.click();
-        fillField(orderPage.idSeries, "1234");
-        fillField(orderPage.idNumber, "123456");
-        fillField(orderPage.issueDate, "01012010");
-        fillField(orderPage.issuePlace, "01012010");
+        orderPage.fillFields();
         orderPage.sendBtn.click();
         Assert.assertEquals("Заполнены не все обязательные поля", orderPage.errorMessage.getText());
+        mainPage=null;
+        travelAndPurchasesPage=null;
+        tabs=null;
+        calculatorForm=null;
+        orderPage=null;
     }
 }

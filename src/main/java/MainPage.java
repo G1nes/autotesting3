@@ -15,6 +15,7 @@ public class MainPage {
         (new WebDriverWait(driver,10)).until(ExpectedConditions.visibilityOf(insuranceBtn));
         this.driver=driver;
     }
+
     @FindBy(xpath = "//li [@class='lg-menu__item']/*/span[text()='Страхование']")
     WebElement insuranceBtn;
 
