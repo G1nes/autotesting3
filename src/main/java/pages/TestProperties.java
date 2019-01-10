@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 public class TestProperties {
+
     private final Properties properties = new Properties();
     private static TestProperties INSTANCE =null;
     private TestProperties(){
