@@ -1,5 +1,9 @@
 import org.junit.Assert;
 import org.junit.Test;
+import pages.CalculatorForm;
+import pages.MainPage;
+import pages.OrderPage;
+import pages.TravelAndPurchasesPage;
 
 import java.util.ArrayList;
 
