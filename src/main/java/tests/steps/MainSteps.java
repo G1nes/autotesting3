@@ -11,6 +11,6 @@ public class MainSteps extends TestPropertiess {
 
     @Step("Выбран пункт подменю {0}")
     public void selectSubMenuItem(String subMenuItem){
-        new MainPagee().selectSubMenu(subMenuItem);
+        new MainPagee(TestPropertiess.getDriver()).selectSubMenu(subMenuItem);
     }
 }
