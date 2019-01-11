@@ -1,23 +1,23 @@
-package pages;
+package tests.pages;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-public class TestProperties {
+public class TestPropertiess {
 
     private final Properties properties = new Properties();
-    private static TestProperties INSTANCE =null;
-    private TestProperties(){
+    private static TestPropertiess INSTANCE =null;
+    private TestPropertiess(){
         try{
             properties.load(new FileInputStream(new File("C:\\Program Files\\JavaLearning\\autotesting3\\settings.properties")));
         }catch (Exception e){
             e.printStackTrace();
         }
     }
-    public static TestProperties getInstance(){
+    public static TestPropertiess getInstance(){
         if (INSTANCE==null){
-            INSTANCE = new TestProperties();
+            INSTANCE = new TestPropertiess();
         }
         return INSTANCE;
     }

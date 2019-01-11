@@ -1,3 +1,5 @@
+package tests;
+
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +11,7 @@ import java.util.ArrayList;
 
 public class InsuranceTest extends TestLauncher {
     @Test
+    @Ignore
     public void testSberInsurance () throws Exception{
         driver.get(url);
         Wait<WebDriver>wait = new WebDriverWait(driver,5);

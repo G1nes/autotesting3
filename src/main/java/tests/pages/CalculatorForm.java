@@ -1,4 +1,4 @@
-package pages;
+package tests.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,15 +7,15 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class CalculatorForm extends MainPage {
+public class CalculatorForm extends MainPagee {
     //https://online.sberbankins.ru/store/vzr/index.html#/viewCalc
     public CalculatorForm(WebDriver driver){
         PageFactory.initElements(driver,this);
-        (new WebDriverWait(driver,10)).until(ExpectedConditions.visibilityOf(orderBtn));
+        (new WebDriverWait(driver,20)).until(ExpectedConditions.visibilityOf(orderBtn));
         this.driver=driver;
     }
     @FindBy(xpath="//SPAN[@ng-click='save()']")
-    WebElement orderBtn;
+    public WebElement orderBtn;
     @FindBy(xpath="//div[@ng-click='setProdProg(prodProg)']")
-    WebElement priceBox;
+    public WebElement priceBox;
 }

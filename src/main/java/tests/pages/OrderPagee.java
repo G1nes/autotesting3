@@ -1,4 +1,4 @@
-package pages;
+package tests.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class OrderPage extends MainPage {
+public class OrderPagee extends MainPagee {
     //https://online.sberbankins.ru/store/vzr/index.html#/viewIn
-    public OrderPage(WebDriver driver){
+    public OrderPagee(WebDriver driver){
         PageFactory.initElements(driver, this);
         (new WebDriverWait(driver, 1)).until(ExpectedConditions.visibilityOf(lNameInsured));
         this.driver=driver;
@@ -19,7 +19,7 @@ public class OrderPage extends MainPage {
         element.sendKeys(value);
     }
     public void fillFields (){
-        OrderPage orderPage = new OrderPage(driver);
+        OrderPagee orderPage = new OrderPagee(driver);
         fillField(orderPage.lNameInsured, "Kurumov");
         fillField(orderPage.fNameInsured, "Deni");
         fillField(orderPage.birthDateInsured, "01011992");
@@ -71,8 +71,8 @@ public class OrderPage extends MainPage {
     WebElement issuePlace;
 
     @FindBy(xpath="//span[@ng-click='save()']")
-    WebElement sendBtn;
+    public WebElement sendBtn;
 
     @FindBy(xpath="//*[text()='Заполнены не все обязательные поля']")
-    WebElement errorMessage;
+    public WebElement errorMessage;
 }
