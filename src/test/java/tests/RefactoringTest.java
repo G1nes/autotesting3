@@ -27,7 +27,8 @@ public class RefactoringTest extends TestLauncher {
         calculatorForm.priceBox.click();
         calculatorForm.orderBtn.click();
         OrderPagee orderPage = new OrderPagee(driver);
-        orderPage.fillFields();
+        orderPage.fillInsuredFields();
+        orderPage.fillInsurantFields();
         orderPage.sendBtn.click();
         Assert.assertEquals("Заполнены не все обязательные поля", orderPage.errorMessage.getText());
         mainPagee =null;

@@ -6,12 +6,17 @@ import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class TestPropertiess {
     private static WebDriver driver;
     public static WebDriver getDriver(){
         return driver;
+    }
+    public void nextTab (){
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1));
     }
     @Before
     public void startTest(){
