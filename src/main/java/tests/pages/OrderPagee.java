@@ -23,6 +23,8 @@ public class OrderPagee extends MainPagee {
         element.sendKeys(value);
     }
     public void fillInsuredFields (String field, String value){
+        field = field.toLowerCase();
+        field = field.replaceAll("\\s+","");
         switch (field){
             case "фамилия" : fillField(lNameInsured,value);
             case "имя" : fillField(fNameInsured,value);
@@ -32,28 +34,21 @@ public class OrderPagee extends MainPagee {
         }
     }
     public void fillInsurantFields (String field, String value){
-        OrderPagee orderPage = new OrderPagee(driver);
-        fillField(orderPage.sName, "Курумова");
-        fillField(orderPage.fName, "Мадина");
-        fillField(orderPage.mName, "НеЗнаюОтчества");
-        fillField(orderPage.birthDate, "01011995");
+        field = field.toLowerCase();
+        field = field.replaceAll("\\s+","");
         checkBoxFemale.click();
-        fillField(orderPage.idSeries, "1234");
-        fillField(orderPage.idNumber, "123456");
-        fillField(orderPage.issueDate, "01012010");
-        fillField(orderPage.issuePlace, "01012010");
         switch (field){
-            case "фамилия" : fillField(lNameInsured,value);
-            case "имя" : fillField(fNameInsured,value);
-            case "дата рождения" : fillField(fNameInsured,value);
-            case "датарождения": fillField(birthDateInsured, value);
-            case "серияпаспорта" : fillField(fNameInsured,value);
-            case "номерпаспорта": fillField(birthDateInsured, value);
-            case "датавыдачи" : fillField(fNameInsured,value);
-            case "кемвыдан": fillField(birthDateInsured, value);
+            case "фамилия" : fillField(sName,value);
+            case "имя" : fillField(fName,value);
+            case "отчество" : fillField(mName,value);
+            case "датарождения": fillField(birthDate, value);
+            case "серияпаспорта" : fillField(idSeries,value);
+            case "номерпаспорта": fillField(idNumber, value);
+            case "датавыдачи" : fillField(issueDate,value);
+            case "кемвыдан": fillField(issuePlace, value);
 
             default:
-                System.out.println("Введите корректное название поля в разделе \"Застрахованные\"");
+                System.out.println("Введите корректное название поля в разделе \"Страхователь\"");
         }
     }
 
