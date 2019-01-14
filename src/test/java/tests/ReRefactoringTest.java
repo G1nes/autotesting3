@@ -32,6 +32,7 @@ public class ReRefactoringTest extends TestPropertiess {
         os.fillInsurantFields("Номер Паспорта", "123456");
         os.fillInsurantFields("Дата выдачи","01011998");
         os.fillInsurantFields("Кем выдан","Washington");
+        //Отправляем данные на валидацию
         os.continueBtn();
         os.checkErrorMessage();
     }
