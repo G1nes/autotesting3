@@ -1,22 +1,20 @@
 package tests.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import tests.steps.TestPropertiess;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 
 public class OrderPagee extends MainPagee {
     //https://online.sberbankins.ru/store/vzr/index.html#/viewIn
     public OrderPagee(WebDriver driver){
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(TestPropertiess.getDriver(), this);
         (new WebDriverWait(driver, 1)).until(ExpectedConditions.visibilityOf(lNameInsured));
-        this.driver=driver;
+        //this.driver=driver;
     }
     public void fillField(WebElement element, String value){
         element.clear();
@@ -53,40 +51,40 @@ public class OrderPagee extends MainPagee {
     }
 
     @FindBy(name="insured0_surname")
-    WebElement lNameInsured;
+    public WebElement lNameInsured;
 
     @FindBy(xpath="//input[@name='insured0_name']")
-    WebElement fNameInsured;
+    public WebElement fNameInsured;
 
     @FindBy(name="insured0_birthDate")
-    WebElement birthDateInsured;
+    public WebElement birthDateInsured;
 
     @FindBy(name="surname")
-    WebElement sName;
+    public WebElement sName;
 
     @FindBy(name="name")
-    WebElement fName;
+    public WebElement fName;
 
     @FindBy(name="middlename")
-    WebElement mName;
+    public WebElement mName;
 
     @FindBy(name="birthDate")
-    WebElement birthDate;
+    public WebElement birthDate;
 
     @FindBy(name="female")
-    WebElement checkBoxFemale;
+    public WebElement checkBoxFemale;
 
     @FindBy(name="passport_series")
-    WebElement idSeries;
+    public WebElement idSeries;
 
     @FindBy(name="passport_number")
-    WebElement idNumber;
+    public WebElement idNumber;
 
     @FindBy(name="issueDate")
-    WebElement issueDate;
+    public WebElement issueDate;
 
     @FindBy(name="issuePlace")
-    WebElement issuePlace;
+    public WebElement issuePlace;
 
     @FindBy(xpath="//span[@ng-click='save()']")
     public WebElement sendBtn;
