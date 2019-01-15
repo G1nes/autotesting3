@@ -13,7 +13,7 @@ public class ReRefactoringTest extends TestPropertiess {
     public void insuranceTest(){
         ms.selectMenuItem("Страхование");
         ms.selectSubMenuItem("Путешествия и покупки");
-        ts.checkTitle();
+        ts.checkTitle("Страхование путешественников");
         ts.selectTravelInsuranceBtn();
         ts.nextTab();
         cs.selectSumCheckBox();
@@ -34,6 +34,6 @@ public class ReRefactoringTest extends TestPropertiess {
         os.fillInsurantFields("Кем выдан","Washington");
         //Отправляем данные на валидацию
         os.continueBtn();
-        os.checkErrorMessage();
+        os.checkErrorMessage("Заполнены не все обязательные поля");
     }
 }

@@ -5,7 +5,7 @@ import ru.yandex.qatools.allure.annotations.Step;
 import tests.pages.OrderPagee;
 
 public class OrderSteps extends TestPropertiess {
-    @Step
+    @Step ("Поле {0} застрахованного заполнено значением {1}")
     public void fillInsuredFields (String field, String value){
         field = field.toLowerCase();
         field = field.replaceAll("\\s+","");
@@ -22,7 +22,7 @@ public class OrderSteps extends TestPropertiess {
                 break;
         }
     }
-    @Step
+    @Step ("Поле {0} страхователя заполнено значением {1}")
     public void fillInsurantFields (String field, String value){
         OrderPagee orderPagee = new OrderPagee(TestPropertiess.getDriver());
         field = field.toLowerCase();
@@ -50,15 +50,15 @@ public class OrderSteps extends TestPropertiess {
                 break;
         }
     }
-    @Step
+    @Step ("Выбран женский пол")
     public void selectSexCheckBox(){
         new OrderPagee(TestPropertiess.getDriver()).checkBoxFemale.click();
     }
-    @Step
-    public void checkErrorMessage (){
-        Assert.assertEquals("Заполнены не все обязательные поля",new OrderPagee(TestPropertiess.getDriver()).errorMessage.getText());
+    @Step ("Появилось сообщение об ошибке {0}")
+    public void checkErrorMessage (String expected){
+        Assert.assertEquals(expected,new OrderPagee(TestPropertiess.getDriver()).errorMessage.getText());
     }
-    @Step
+    @Step ("Нажата кнопка \"Продолжить\"")
     public void continueBtn(){
         new OrderPagee(TestPropertiess.getDriver()).sendBtn.click();
     }
