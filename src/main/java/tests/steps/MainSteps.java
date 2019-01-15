@@ -1,7 +1,7 @@
 package tests.steps;
 
+import io.qameta.allure.Step;
 import tests.pages.MainPagee;
-import ru.yandex.qatools.allure.annotations.Step;
 
 public class MainSteps extends TestPropertiess {
     @Step("Выбран пункт главного меню {0}")

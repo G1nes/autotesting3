@@ -1,11 +1,12 @@
 package tests.steps;
 
+import io.qameta.allure.Step;
 import org.junit.Assert;
-import ru.yandex.qatools.allure.annotations.Step;
+
 import tests.pages.OrderPagee;
 
 public class OrderSteps extends TestPropertiess {
-    @Step ("Поле {0} застрахованного заполнено значением {1}")
+    @Step("Поле {0} застрахованного заполнено значением {1}")
     public void fillInsuredFields (String field, String value){
         field = field.toLowerCase();
         field = field.replaceAll("\\s+","");

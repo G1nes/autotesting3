@@ -1,11 +1,11 @@
 package tests.steps;
 
+import io.qameta.allure.Step;
 import org.junit.Assert;
-import ru.yandex.qatools.allure.annotations.Step;
 import tests.pages.TravelAndPurchasesPagee;
 
 public class TravelStepss extends TestPropertiess {
-    @Step ("Нажата кнопка \"Оформить онлайн\"")
+    @Step("Нажата кнопка \"Оформить онлайн\"")
     public void selectTravelInsuranceBtn(){
         new TravelAndPurchasesPagee(TestPropertiess.getDriver()).issueOnline.click();
     }
