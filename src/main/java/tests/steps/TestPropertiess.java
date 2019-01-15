@@ -2,8 +2,11 @@ package tests.steps;
 
 import org.junit.AfterClass;
 import org.junit.Before;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import ru.yandex.qatools.allure.annotations.Attachment;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
@@ -28,5 +31,9 @@ public class TestPropertiess {
     @AfterClass
     public static void endTest(){
         driver.quit();
+    }
+    @Attachment(type = "image/png",value = "Screenshot")
+    public static byte [] takeScreenshot(){
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 }
