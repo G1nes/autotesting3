@@ -1,4 +1,4 @@
-package tests;
+/*package tests;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -49,4 +49,4 @@ public class TestLauncher {
         driver.findElement(locator).clear();
         driver.findElement(locator).sendKeys(value);
     }
-}
+}*/

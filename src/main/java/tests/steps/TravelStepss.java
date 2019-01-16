@@ -9,7 +9,7 @@ public class TravelStepss extends TestPropertiess {
     public void selectTravelInsuranceBtn(){
         new TravelAndPurchasesPagee(TestPropertiess.getDriver()).issueOnline.click();
     }
-    @Step ("Прошла проверка наличия заголовка {0}")
+    @Step ("Прошла проверка наличия заголовка {expected}")
     public void checkTitle(String expected){
         Assert.assertEquals(expected, new TravelAndPurchasesPagee(TestPropertiess.getDriver()).travellerInsurance.getText());
     }

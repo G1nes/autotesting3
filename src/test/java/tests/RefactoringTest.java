@@ -1,4 +1,4 @@
-package tests;
+/*package tests;
 
 import org.junit.Assert;
 import org.junit.Ignore;
@@ -37,4 +37,4 @@ public class RefactoringTest extends TestLauncher {
         calculatorForm=null;
         orderPage=null;
     }
-}
+}*/

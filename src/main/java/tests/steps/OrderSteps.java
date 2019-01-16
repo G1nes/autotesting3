@@ -6,7 +6,7 @@ import org.junit.Assert;
 import tests.pages.OrderPagee;
 
 public class OrderSteps extends TestPropertiess {
-    @Step("Поле {0} застрахованного заполнено значением {1}")
+    @Step("Поле {field} застрахованного заполнено значением {value}")
     public void fillInsuredFields (String field, String value){
         field = field.toLowerCase();
         field = field.replaceAll("\\s+","");
@@ -23,7 +23,7 @@ public class OrderSteps extends TestPropertiess {
                 break;
         }
     }
-    @Step ("Поле {0} страхователя заполнено значением {1}")
+    @Step ("Поле {field} страхователя заполнено значением {value}")
     public void fillInsurantFields (String field, String value){
         OrderPagee orderPagee = new OrderPagee(TestPropertiess.getDriver());
         field = field.toLowerCase();
